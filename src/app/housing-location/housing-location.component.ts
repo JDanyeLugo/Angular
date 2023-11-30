@@ -6,7 +6,16 @@ import {HousingLocation} from '../housinglocation';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>housing-location works!</p>
+    <section class="listing">
+      <img
+        class="listing-photo"
+        [src]="housingLocation.photo"
+        alt="Exterior photo of {{ housingLocation.name}}"
+        crossoring
+        />
+        <h2 class="lsting-heading">{{ housingLocation.name }}</h2>
+        <h2 class="lsting-heading">{{ housingLocation.city }}, {{ housingLocation.state }}</h2>
+    </section>
   `,
   styleUrls: ['./housing-location.component.css'],
 })
