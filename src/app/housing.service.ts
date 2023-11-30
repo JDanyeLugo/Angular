@@ -5,6 +5,7 @@ import {HousingLocation} from './housinglocation';
 })
 export class HousingService {
   readonly baseUrl = 'https://angular.dev/assets/tutorials/common';
+  
   protected housingLocationList: HousingLocation[] = [
     {
       id: 0,
@@ -112,5 +113,10 @@ export class HousingService {
   }
   getHousingLocationById(id: number): HousingLocation | undefined {
     return this.housingLocationList.find((housingLocation) => housingLocation.id === id);
+  }
+  submitAplication(firstName: string, lastName: string, email: string){
+    console.log(
+      `Homes aplication received: firstName: ${firstName}, lastNmae: ${lastName}, email: ${email}`,
+    );
   }
 }
